@@ -2,7 +2,7 @@ MarksList = new Mongo.Collection('marks');
 
 if (Meteor.isClient) {
   // counter starts at 0
-  Session.setDefault('counter', 0);
+  Session.set('editing', null);
 
   Template.list.helpers({
     list: function () {
@@ -22,6 +22,18 @@ if (Meteor.isClient) {
         link: isLink
       })
     }
+  });
+
+  Template.list.events({
+    // 'click .edit': function() {
+    //   this.link = false;
+    //   console.log(this)
+    //
+    // },
+    'click .remove': function() {
+      MarksList.remove(this._id);
+    }
+
   })
 }
 
