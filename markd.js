@@ -14,10 +14,12 @@ if (Meteor.isClient) {
   Template.input.events({
     'submit form': function(event) {
       var inputValue = event.target.mainInput.value;
+      var isLink = (inputValue.substr(0,4) === 'http') ? true : false;
       MarksList.insert({
         text: inputValue,
         date: new Date(),
-        createdBy: Meteor.userId()
+        createdBy: Meteor.userId(),
+        link: isLink
       })
     }
   })

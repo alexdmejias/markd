@@ -18,7 +18,13 @@
 <template name="list">
   <ul>
     {{#each list}}
-      <li>{{text}}</li>
+      <li>
+        {{#if isLink}}
+          <a href="{{text}}">{{text}}</a>
+        {{else}}
+          {{text}}
+        {{/if}}
+      </li>
     {{/each}}
   </ul>
 </template>
