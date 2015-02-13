@@ -7,7 +7,7 @@ if (Meteor.isClient) {
   Template.list.helpers({
     list: function () {
       var author = Meteor.userId();
-      return MarksList.find({}, {sort :{createdBy: author}})
+      return MarksList.find({createdBy: author}, {sort :{date: -1}})
     }
   });
 
