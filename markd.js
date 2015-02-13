@@ -1,4 +1,4 @@
-var MarksList = new Mongo.Collection('marks');
+MarksList = new Mongo.Collection('marks');
 
 if (Meteor.isClient) {
   // counter starts at 0
