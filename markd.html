@@ -1,0 +1,24 @@
+<head>
+  <title>markd</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{> loginButtons}}
+  {{> input}}
+  {{> list}}
+</body>
+
+<template name="input">
+  <form>
+    <textarea name="mainInput"></textarea>
+    <input type="submit">
+  </form>
+</template>
+<template name="list">
+  <ul>
+    {{#each list}}
+      <li>{{text}}</li>
+    {{/each}}
+  </ul>
+</template>
