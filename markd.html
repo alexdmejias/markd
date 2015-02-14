@@ -18,15 +18,15 @@
 <template name="list">
   <ul>
     {{#each list}}
-      <li class="wasd {{#if editMode}}editing{{/if}}">
+      <li class="{{#if editing}}editing{{/if}}">
         {{#if link}}
           <a href="{{text}}" target="_blank" class="text">{{text}}</a>
-          <input type="text" value="{{text}}">
         {{else}}
           {{text}}
         {{/if}}
+          <input type="text" class="editField" id="editField-{{_id}}" value="{{text}}">
           <div class="actions">
-            <input type="button" class="edit" value="edit">
+            <input type="button" class="edit" value="{{editingStatus}}">
             <input type="button" class="remove" value="remove">
           </div>
       </li>

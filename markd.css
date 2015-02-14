@@ -1,3 +1,11 @@
+li .editField {
+  display: none;
+}
+
+.editing {
+  background: red;
+}
+
 .editing a{
   display: none;
 }
