@@ -1,15 +1,24 @@
-li .editField {
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.item .text-edit-field {
   display: none;
 }
 
-.editing {
-  background: red;
-}
-
-.editing a{
-  display: none;
-}
-
-.editing input {
+.item.editing .text-edit-field {
   display: block;
+}
+
+.item.editing .text-content {
+  display: none;
+}
+
+.item .actions {
+  display: none;
+}
+
+.item.editing .actions, .item:hover .actions {
+  display: inline-block;
 }

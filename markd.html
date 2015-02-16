@@ -3,33 +3,54 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-  {{> loginButtons}}
-  {{> input}}
-  {{> list}}
+  <div class="wrapper">
+    {{> loginButtons}}
+    {{> input}}
+    {{> list}}
+  </div>
+
 </body>
 
 <template name="input">
-  <form>
-    <textarea name="mainInput"></textarea>
-    <input type="submit">
-  </form>
+  <div class="ui segment">
+    <div class="ui form">
+      <form>
+        <div class="field">
+          <label>Enter Note</label>
+          <textarea name="mainInput"></textarea>
+          <input class="ui submit button " type="submit">
+
+        </div>
+      </form>
+    </div>
+  </div>
 </template>
 <template name="list">
-  <ul>
-    {{#each list}}
-      <li class="{{#if editing}}editing{{/if}}">
-        {{#if link}}
-          <a href="{{text}}" target="_blank" class="text">{{text}}</a>
-        {{else}}
-          {{text}}
-        {{/if}}
-          <input type="text" class="editField" id="editField-{{_id}}" value="{{text}}">
-          <div class="actions">
-            <input type="button" class="edit" value="{{editingStatus}}">
-            <input type="button" class="remove" value="remove">
+  <div class="items-container">
+    <div class="html ui top attached segment">
+      {{#each list}}
+        <div class="ui segment item {{#if editing}}editing{{/if}}">
+        <!-- <div class="ui statistic item {{#if editing}}editing{{/if}}"> -->
+          <h4 class="ui header">{{date}}</h4>
+          <div class="actions ui top right attached label">
+            <a class="ui blue label edit">{{editingStatus}}</a>
+            <a class="ui red label remove">Remove</a>
           </div>
-      </li>
+          {{#if link}}
+            <div class="text">
+              <a href="{{text}}" target="_blank" class="text-content">{{text}}</a>
+              <input type="text" class="text-edit-field" id="editField-{{_id}}" value="{{text}}">
+            </div>
+          {{else}}
+            <div class="text">
+              <div class="text-content">{{#markdown}}{{text}}{{/markdown}}</div>
+              <textarea class="text-edit-field" id="editField-{{_id}}">{{text}}</textarea>
+            </div>
+          {{/if}}
+
+        </div>
+      <div class="ui divider"></div>
     {{/each}}
-  </ul>
+    </div>
+  </div>
 </template>
