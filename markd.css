@@ -22,3 +22,8 @@
 .item.editing .actions, .item:hover .actions {
   display: inline-block;
 }
+
+textarea {
+  width: 100%;
+  height: 250px;
+}
