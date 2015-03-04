@@ -3,6 +3,12 @@
   margin: 0 auto;
 }
 
+@media all and (min-width: 700px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
 .item .text-edit-field {
   display: none;
 }
@@ -26,4 +32,21 @@
 textarea {
   width: 100%;
   height: 250px;
+}
+
+
+._tags {
+  display: inline-block;
+}
+
+._tags input {
+  display: none;
+}
+
+._tags.editingTags a {
+  display: none;
+}
+
+._tags.editingTags input {
+  display: block;
 }
