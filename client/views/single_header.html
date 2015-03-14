@@ -1,0 +1,65 @@
+<template name="single_header">
+  <header class="ui top attached label {{#if editingTitle}}editingTitle{{/if}}">
+    {{#if title}}
+      <span class="text-content">{{title}}</span>
+    {{/if}}
+    <input class="text-edit-field" id="editTitleField-{{_id}}" name="titleEdit" value="{{title}}" placeholder="enter a note title">
+
+    <div class="ui red label">
+      <i class="clock icon"></i> {{displayDate}}
+    </div>
+
+    <div class="_tags {{#if editingTags}}editingTags{{/if}}">
+      {{#if tags}}
+        {{#each tags}}
+          <a class="ui red tag label">{{this}}</a>
+        {{/each}}
+      {{else}}
+        <a class="ui teal tag label">Click to add Tag</a>
+
+        <div class="field">
+          <input type="text" class="tags_field" name="tags" placeholder="click here to add tags">
+        </div>
+      {{/if}}
+    </div>
+
+    <div class="actions ui top right attached label">
+      <a class="ui red label _more-actions">More Actions</a>
+      <div class="ui divided list _hidden-actions">
+        {{#unless inSingle}}
+          <div class="item">
+            <i class="dot circle outline icon"></i>
+            <div class="content">
+              <a href="/marks/{{_id}}" class="header">view</a>
+            </div>
+          </div>
+        {{/unless}}
+        <div class="item">
+          <i class="write icon"></i>
+          <div class="content">
+            <a class="header edit">{{editingStatus}}</a>
+          </div>
+        </div>
+        <div class="item">
+          <i class="trash icon"></i>
+          <div class="content">
+            <a class="header remove">Remove</a>
+          </div>
+        </div>
+        <div class="item">
+          {{#if isArchived}}
+          <i class="inbox icon"></i>
+            <div class="content">
+              <a class="header archive">Move to Inbox</a>
+            </div>
+          {{else}}
+            <i class="archive icon"></i>
+            <div class="content">
+              <a class="header archive">Archive</a>
+            </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </header>
+</template>
