@@ -25,6 +25,7 @@
     "$": false,
     "Template": false,
     "Mongo": false,
-    "Router": false
+    "Router": false,
+    "MarksList": false
   }
 }

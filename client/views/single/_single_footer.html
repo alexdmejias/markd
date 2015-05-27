@@ -1,0 +1,21 @@
+<template name="single_footer">
+  <div class="_tags">
+    {{#if tags}}
+      {{#each tags}}
+        <a href="tag/{{slug}}" class="tiny ui {{color}} button">#{{name}}</a>
+      {{/each}}
+    {{/if}}
+    <button class="tiny ui icon button __tags_add">
+      <i class="plus icon"></i>
+    </button>
+
+    <div class="ui action input _new_tags">
+      <input type="text" placeholder="Search...">
+      <button class="ui icon button">
+        <i class="save icon __tags_save"></i>
+      </button>
+    </div>
+
+
+  </div>
+</template>

@@ -1,0 +1,23 @@
+<template name="header">
+  {{> loginButtons}}
+  {{#if currentUser}}
+    <div class="ui menu">
+      <div class="ui menu">
+        <a class="active item" href="/">
+          <i class="home icon"></i> Home
+        </a>
+        <a class="item" href="/marks/archive">
+          <i class="archive icon"></i> Archive
+        </a>
+        <div class="right menu">
+          <div class="item">
+            <div class="ui transparent icon input">
+              <input type="text" placeholder="Search...">
+              <i class="search link icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+</template>

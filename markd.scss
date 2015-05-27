@@ -37,7 +37,7 @@
 
 .item .actions {
   text-align: right;
-  transition: 0.5s background;
+  transition: 0.3s background;
   background: none;
 }
 
@@ -46,6 +46,7 @@
 }
 .item .actions:hover {
   background: #AFAEAE;
+  z-index: 999;
 }
 .item .actions:hover ._hidden-actions {
   display: block;
@@ -53,7 +54,7 @@
 
 .item .actions ._hidden-actions .item {
   padding: 1em;
-  transition: 0.5s background;
+  transition: 0.3s background;
 }
 .item .actions ._hidden-actions .item:hover {
   background: white;
@@ -64,23 +65,29 @@ textarea {
   height: 250px;
 }
 
-._tags {
-  display: inline-block;
-}
-
-._tags input {
-  display: none;
-}
-
-._tags.editingTags a {
-  display: none;
-}
-
-._tags.editingTags input {
-  display: block;
-}
-
 /* ITEM BODY */
 .text {
   padding: 1em 0 0;
+  margin-bottom: 1rem;
+}
+
+.black {
+  /*background-color: pink !important;*/
+}
+
+._tags {
+  ._new_tags {
+    display: none;
+
+    .ui.small.input {
+      font-size: 0.82em;
+    }
+    .ui.action.input > .button {
+      padding: .7em 0.571em 0.571em 0.571em;
+    }
+  }
+
+  ._new_tags.adding {
+    display: flex;
+  }
 }

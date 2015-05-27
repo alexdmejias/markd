@@ -10,6 +10,7 @@ insecure
 accounts-ui
 accounts-password
 markdown
-nooitaf:semantic-ui
+semantic:ui-css
 iron:router
 mrt:moment
+fourseven:scss
