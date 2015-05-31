@@ -27,3 +27,11 @@ Router.route('/marks/:_id', function () {
     this.render('single', {data: mark});
   }
 });
+
+Router.route('/marks/tags/:slug', function() {
+  var marks = MarksList.find({ 'tags.slug': this.params.slug }, {sort :{date: -1}});
+
+  this.render('list', { data: {records: marks } } );
+}, {
+  name: 'marks.tags'
+} )
