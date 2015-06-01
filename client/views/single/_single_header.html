@@ -1,7 +1,7 @@
 <template name="single_header">
   <header class="ui top attached label {{#if editingTitle}}editingTitle{{/if}}">
     {{#if title}}
-      <span class="text-content">{{title}}</span>
+      <a href="/marks/{{_id}}"><span class="text-content">{{title}}</span></a>
     {{/if}}
     <input class="text-edit-field" id="editTitleField-{{_id}}" name="titleEdit" value="{{title}}" placeholder="enter a note title">
 
