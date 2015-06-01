@@ -30,7 +30,7 @@ Template.single_footer.events({
           }
         }
       });
-      input.val('');
+      input.val('').focus();
     }
   },
 
