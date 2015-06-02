@@ -20,28 +20,28 @@
             </div>
           </div>
         {{/unless}}
-        <div class="item">
+        <div class="item edit">
           <i class="write icon"></i>
           <div class="content">
-            <a class="header edit">{{editingStatus}}</a>
+            <a class="header">{{editingStatus}}</a>
           </div>
         </div>
-        <div class="item">
+        <div class="item remove">
           <i class="trash icon"></i>
           <div class="content">
-            <a class="header remove">Remove</a>
+            <a class="header">Remove</a>
           </div>
         </div>
-        <div class="item">
+        <div class="item archive">
           {{#if isArchived}}
           <i class="inbox icon"></i>
             <div class="content">
-              <a class="header archive">Move to Inbox</a>
+              <a class="header">Move to Inbox</a>
             </div>
           {{else}}
             <i class="archive icon"></i>
             <div class="content">
-              <a class="header archive">Archive</a>
+              <a class="header">Archive</a>
             </div>
           {{/if}}
         </div>
