@@ -30,8 +30,10 @@ Template.single_footer.events({
           }
         }
       });
-      input.val('').focus();
+      input.val('');
     }
+    // hide the tag box
+    $(e.currentTarget).parent().removeClass('adding');
   },
 
   'click .__tags_delete': function(e, template) {
