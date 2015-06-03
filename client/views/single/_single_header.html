@@ -3,7 +3,9 @@
     {{#if title}}
       <a href="/marks/{{_id}}"><span class="text-content">{{title}}</span></a>
     {{/if}}
-    <input class="text-edit-field" id="editTitleField-{{_id}}" name="titleEdit" value="{{title}}" placeholder="enter a note title">
+    <div class="ui input">
+      <input class="text-edit-field" id="editTitleField-{{_id}}" name="titleEdit" value="{{title}}" placeholder="enter a note title">
+    </div>
 
     <div class="ui red label">
       <i class="clock icon"></i> {{displayDate}}

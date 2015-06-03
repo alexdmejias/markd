@@ -1,13 +1,18 @@
 <template name="input">
-  <div class="ui segment">
-    <div class="ui form">
-      <form name="mainInputForm" class="mainInputForm">
+  <div class="ui fluid form segment">
+    <form name="mainInputForm" class="mainInputForm">
+      <div class="two fields">
         <div class="field">
-          <label>Enter Note</label>
-          <textarea name="mainInput"></textarea>
-          <input class="ui submit button " type="submit">
+          <label>Title</label>
+          <input placeholder="Mark Name" name="titleInput" type="text">
         </div>
-      </form>
-    </div>
+      </div>
+      <div class="field">
+        <label>Mark</label>
+        <textarea name="mainInput"></textarea>
+      </div>
+      <!-- <div class="ui submit button" type="submit">Submit</div> -->
+      <input class="ui submit button" type="submit" value="Submit">
+    </form>
   </div>
 </template>

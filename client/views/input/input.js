@@ -1,19 +1,31 @@
 Template.input.events({
 	'submit form': function(event) {
 		event.preventDefault();
-		var input = event.target.mainInput;
+		var input = event.target.mainInput,
+			title = event.target.titleInput;
+
 		var inputValue = input.value;
-		var isLink = (inputValue.substr(0,4) === 'http');
-		MarksList.insert({
+		var toInsert = {
 			text: inputValue,
 			date: new Date(),
 			createdBy: Meteor.userId(),
-			link: isLink,
 			title: null,
 			archived: false,
 			private: true,
 			tags: []
-		})
-		input.value = '';
+		};
+
+		if (title.value !== '') {
+			toInsert.title = title.value;
+		}
+
+		if (input !== '') {
+			MarksList.insert(toInsert);
+			input.value = '';
+			title.value = '';
+		} else {
+			// todo: show error messages
+		}
+
 	}
 });
