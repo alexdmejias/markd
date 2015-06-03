@@ -21,6 +21,10 @@
   display: none;
 }
 
+.item.editing .__tags_delete {
+  display: inline-block;
+}
+
 
 /* ITEM HEADER */
 .segment.item header .text-content {
@@ -91,6 +95,10 @@ textarea {
   .__tags_add {
     opacity: 0;
     transition: opacity 300ms;
+  }
+
+  .__tags_delete {
+    display: none;
   }
 
   ._new_tags.adding {
