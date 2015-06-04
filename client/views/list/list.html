@@ -1,4 +1,9 @@
 <template name="list">
+  <div class="ui segment">
+    {{#each tags}}
+      <a class="ui {{color}} large label" href="/marks/tags/{{slug}}">{{name}}</a>
+    {{/each}}
+  </div>
   <div class="items-container">
     <div class="html ui top attached segment">
       {{#each records}}
