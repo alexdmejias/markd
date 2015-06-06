@@ -1,7 +1,10 @@
 <template name="list">
   <div class="ui segment">
     {{#each tags}}
-      <a class="ui {{color}} large label" href="/marks/tags/{{slug}}">{{name}}</a>
+      <a class="ui {{color}} large label" href="/marks/tags/{{slug}}">
+        {{name}}
+        <div class="detail">{{count}}</div>
+      </a>
     {{/each}}
   </div>
   <div class="items-container">
