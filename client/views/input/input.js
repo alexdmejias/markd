@@ -1,34 +1,24 @@
 Template.input.events({
 	'submit form': function(event) {
 		event.preventDefault();
-		var input = event.target.mainInput,
-			title = event.target.titleInput;
+		var input = event.target.mainInput || '',
+			title = event.target.titleInput || '';
 
-		var toInsert = {
-			text: input.value,
-			title: '',
-			archived: false,
-			private: true,
-			tags: [],
-			updatedOn: new Date(),
-			createdOn: new Date(),
-			createdBy: Meteor.userId(),
-		};
-
-		if (title.value !== '') {
-			toInsert.title = title.value;
-		}
-
-		if (input !== '') {
-			MarksList.insert({
-
-			});
-			input.value = '';
-			title.value = '';
+		if (!title && !input) {
+			console.log('cant submit empty mark');
 		} else {
-			// todo: show error messages
+			var toInsert = {
+				text: input.value,
+				title: '',
+				archived: false,
+				private: true,
+				tags: [],
+				updatedOn: new Date(),
+				createdOn: new Date(),
+				createdBy: Meteor.userId(),
+			};
+			MarksList.insert(toInsert);
 		}
-
 	}
 });
 
