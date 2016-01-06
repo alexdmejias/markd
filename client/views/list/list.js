@@ -13,7 +13,6 @@ Template.list.helpers({
 			}
 		});
 
-		console.log(newTags);
 		return newTags;
 	}
 });
