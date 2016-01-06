@@ -4,19 +4,13 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
-autopublish
-insecure
 accounts-ui
 accounts-password
 markdown
-semantic:ui-css
 iron:router
 mrt:moment
 fourseven:scss
 yasaricli:slugify
-msavin:mongol
-grigio:babel
 erasaur:meteor-lodash
 juliancwirko:s-alert
 juliancwirko:s-alert-jelly
@@ -25,3 +19,22 @@ accounts-google
 accounts-github
 accounts-twitter
 perak:markdown
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+semantic:ui-css
+constellation:console
+aldeed:collection2
+semantic:ui-dropdown
+babrahams:constellation

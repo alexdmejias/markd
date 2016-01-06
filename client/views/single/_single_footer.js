@@ -16,7 +16,7 @@ Template.single_footer.events({
 
     if (value !== '') {
       var tags = value.split(',');
-      _.each(tags, (tag) => {
+      _.each(tags, function(tag) {
         if (tag) {
           var insert = {
             color: '',

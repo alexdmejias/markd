@@ -4,15 +4,15 @@ Template.input.events({
 		var input = event.target.mainInput,
 			title = event.target.titleInput;
 
-		var inputValue = input.value;
 		var toInsert = {
-			text: inputValue,
-			date: new Date(),
-			createdBy: Meteor.userId(),
-			title: null,
+			text: input.value,
+			title: '',
 			archived: false,
 			private: true,
-			tags: []
+			tags: [],
+			updatedOn: new Date(),
+			createdOn: new Date(),
+			createdBy: Meteor.userId(),
 		};
 
 		if (title.value !== '') {
@@ -20,7 +20,9 @@ Template.input.events({
 		}
 
 		if (input !== '') {
-			MarksList.insert(toInsert);
+			MarksList.insert({
+
+			});
 			input.value = '';
 			title.value = '';
 		} else {
@@ -29,3 +31,27 @@ Template.input.events({
 
 	}
 });
+
+Template.input.helpers({
+	'tags': function() {
+		var validTags = _.filter( _.sortBy( _.flatten( _.pluck(MarksList.find().fetch(), 'tags'), 'name' ) ).reverse() , 'name');
+		var newTags = [];
+		_.forEach(validTags, function(tag, index) {
+			var filtered = _.find(newTags, {'name': tag.name});
+			if (filtered) {
+				var filteredIndex = _.findIndex(newTags, {name: tag.name});
+				newTags[filteredIndex].count += 1;
+			} else {
+				tag.count = 1;
+				newTags.push(tag);
+			}
+		});
+
+		return newTags;
+	}
+});
+
+
+Template.input.onRendered(function() {
+	$('.ui.dropdown').dropdown({allowAdditions: true });
+})

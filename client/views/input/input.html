@@ -1,18 +1,28 @@
 <template name="input">
-  <div class="ui fluid form segment">
-    <form name="mainInputForm" class="mainInputForm">
-      <div class="two fields">
-        <div class="field">
-          <label>Title</label>
-          <input placeholder="Mark Name" name="titleInput" type="text">
-        </div>
-      </div>
+<div class="ui fluid form segment">
+  <form name="mainInputForm" class="mainInputForm">
+    <div class="two fields">
       <div class="field">
-        <label>Mark</label>
-        <textarea name="mainInput"></textarea>
+        <label>Title</label>
+        <input placeholder="Mark Name" name="titleInput" type="text">
       </div>
-      <!-- <div class="ui submit button" type="submit">Submit</div> -->
-      <input class="ui submit button" type="submit" value="Submit">
-    </form>
-  </div>
+    </div>
+    <div class="field">
+      <label>Mark</label>
+      <textarea name="mainInput"></textarea>
+    </div>
+    <div class="field">
+      <select class="ui fluid search dropdown" multiple="">
+        <option value="">Label</option>
+        {{#each tags}}
+          <option value="{{slug}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <input class="ui submit button" type="submit" value="Submit">
+  </form>
+</div>
+
+
 </template>
