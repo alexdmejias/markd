@@ -27,8 +27,7 @@ Router.route('/marks/archive', {
 
 Router.route('/marks/:_id', {
   name: 'singleMark',
-  template: 'list',
-  waitOn: function () { return Meteor.subscribe('singleMark', this.params._id)},
+  template: 'singleMark',
   data: function () { return {records: MarksList.find().fetch()} }
 });
 
