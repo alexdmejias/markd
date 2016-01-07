@@ -52,6 +52,7 @@ email@1.0.8
 erasaur:meteor-lodash@3.10.1_1
 facebook@1.2.2
 fastclick@1.0.7
+flemay:less-autoprefixer@1.2.0
 fourseven:scss@3.4.1
 geojson-utils@1.0.4
 github@1.1.4
@@ -82,7 +83,6 @@ livedata@1.0.15
 localstorage@1.0.5
 logging@1.0.8
 markdown@1.0.5
-materialize:materialize@0.97.5
 mdg:validation-error@0.2.0
 meteor@1.1.10
 meteor-base@1.0.1
@@ -111,8 +111,8 @@ reactive-var@1.0.6
 reload@1.1.4
 retry@1.0.4
 routepolicy@1.0.6
-semantic:ui-css@1.12.3
-semantic:ui-dropdown@2.1.7
+semantic:ui@2.1.7
+semantic:ui-data@2.1.7
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4
