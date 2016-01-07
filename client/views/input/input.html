@@ -12,12 +12,9 @@
       <textarea name="mainInput"></textarea>
     </div>
     <div class="field">
-      <select class="ui fluid search dropdown" multiple="">
-        <option value="">Label</option>
-        {{#each tags}}
-          <option value="{{slug}}">{{name}}</option>
-        {{/each}}
-      </select>
+      <a class="ui teal tag label">
+        <i class="plus icon"></i>Add Label
+      </a>
     </div>
 
     <input class="ui submit button" type="submit" value="Submit">
