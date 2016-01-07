@@ -1,5 +1,9 @@
 <template name="single_header">
   <header class="ui top attached label {{#if editingTitle}}editingTitle{{/if}}">
+    {{#if private}}
+      <i class="privacy icon"></i>
+    {{/if}}
+
     {{#if title}}
       <a href="/marks/{{_id}}"><span class="text-content">{{title}}</span></a>
     {{/if}}

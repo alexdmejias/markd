@@ -11,13 +11,14 @@ Template.input.events({
 				text: input.value,
 				title: '',
 				archived: false,
-				private: true,
+				private: $('.ui.checkbox').checkbox('is checked'),
 				tags: [],
 				updatedOn: new Date(),
 				createdOn: new Date(),
 				createdBy: Meteor.userId(),
 			};
 			MarksList.insert(toInsert);
+			$('.ui.checkbox').checkbox('check');
 		}
 	}
 });
@@ -26,5 +27,5 @@ Template.input.helpers({
 });
 
 Template.input.onRendered(function() {
-	$('.ui.dropdown').dropdown({allowAdditions: true });
+	$('.ui.checkbox').checkbox();
 })
