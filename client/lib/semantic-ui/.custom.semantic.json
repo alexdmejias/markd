@@ -14,6 +14,7 @@
     "feed": true,
     "flag": true,
     "form": true,
+    "accordion": true,
     "grid": true,
     "header": true,
     "icon": true,
