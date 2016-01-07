@@ -21,6 +21,12 @@
   display: none;
 }
 
+.item.private header.ui.label {
+  border-color: #564F8A;
+  background-color: #564F8A;
+  color: #fff;
+}
+
 .item.editing .__tags_delete {
   display: inline-block;
 }
