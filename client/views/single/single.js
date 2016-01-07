@@ -1,7 +1,7 @@
 Template.single.helpers({
 	editing: function() {
 		return Session.equals('editing', this._id);
-	},
+	}
 
 });
 Template.single.events({

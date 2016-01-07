@@ -9,7 +9,7 @@ Template.input.events({
 		} else {
 			var toInsert = {
 				text: input.value,
-				title: '',
+				title: title.value,
 				archived: false,
 				private: $('.ui.checkbox').checkbox('is checked'),
 				tags: [],
@@ -18,6 +18,9 @@ Template.input.events({
 				createdBy: Meteor.userId(),
 			};
 			MarksList.insert(toInsert);
+
+			input.value = '';
+			title.value = '';
 			$('.ui.checkbox').checkbox('check');
 		}
 	}
