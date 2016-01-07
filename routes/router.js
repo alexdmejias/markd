@@ -6,6 +6,16 @@ Router.configure({
 
 Router.route('/', {
   name: 'overview',
+  template: function() {
+    var template;
+    if (!Meteor.userId()) {
+      template = '404'
+    } else {
+      template = 'overview'
+    }
+
+    return template
+  },
   waitOn: function () { return Meteor.subscribe('indexMarks')},
   data: function () { return {records: MarksList.find().fetch()} }
 });
