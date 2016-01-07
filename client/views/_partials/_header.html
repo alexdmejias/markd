@@ -1,26 +1,33 @@
 <template name="header">
   {{> loginButtons}}
   {{#if currentUser}}
-    <div class="ui menu">
-      <div class="ui menu">
-        <a class="active item" href="/">
-          <i class="home icon"></i> Home
-        </a>
-        <a class="item" href="/marks/archive">
-          <i class="archive icon"></i> Archive
-        </a>
-        <a class="item" href="/marks/tags">
-          <i class="tags icon"></i> Tags
-        </a>
-        <div class="right menu">
-          <div class="item">
-            <div class="ui transparent icon input">
-              <input type="text" placeholder="Search...">
-              <i class="search link icon"></i>
-            </div>
-          </div>
-        </div>
+  <div class="ui menu">
+    <div class="header item">
+      Markd
+    </div>
+    <a class="item" href="/">
+      <i class="browser icon"></i> Overview
+    </a>
+    <a class="item active" href="/marks/archive">
+      <i class="archive icon"></i> Archive
+    </a>
+    <a class="item" href="/marks/tags">
+      <i class="tags icon"></i> Tags
+    </a>
+
+    <div class="item">
+      <div class="ui primary button">
+        <i class="write icon"></i> New Mark
       </div>
     </div>
+
+    <div class="right item">
+      <div class="ui icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>
+    </div>
+  </div>
+
   {{/if}}
 </template>
