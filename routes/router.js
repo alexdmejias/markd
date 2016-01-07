@@ -16,14 +16,12 @@ Router.route('/', {
 
     return template
   },
-  waitOn: function () { return Meteor.subscribe('indexMarks')},
   data: function () { return {records: MarksList.find().fetch()} }
 });
 
 Router.route('/marks/archive', {
   name: 'archive',
-  template: 'list',
-  waitOn: function () { return Meteor.subscribe('archievedMarks')},
+  template: 'archive',
   data: function () { return {records: MarksList.find().fetch()} }
 });
 
