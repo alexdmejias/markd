@@ -17,11 +17,19 @@ Template.input.events({
 				createdOn: new Date(),
 				createdBy: Meteor.userId(),
 			};
-			MarksList.insert(toInsert);
+			MarksList.insert(toInsert, function(err, id) {
+				if (err) {
+					sAlert.error('Something went wrong please try again');
+				} else {
 
-			input.value = '';
-			title.value = '';
-			$('.ui.checkbox').checkbox('check');
+					sAlert.success(`Successfully created new Mark. <a href=\"/marks/${id}\">View it</a>`, {html: true});
+					input.value = '';
+					title.value = '';
+					$('.ui.checkbox').checkbox('check');
+				}
+			});
+
+
 		}
 	}
 });
