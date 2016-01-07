@@ -13,3 +13,19 @@ MarksList.allow({
    return true;
   }
 });
+
+TagsList = new Mongo.Collection('tags');
+
+TagsList.allow({
+  insert: function () {
+    // the user must be logged in, and the document must be owned by the user
+    return true;
+  },
+  update: function () {
+    // can only change your own documents
+    return true;
+  },
+  remove: function (userId, doc) {
+   return true;
+  }
+});

@@ -8,6 +8,11 @@ MarksList.attachSchema(new SimpleSchema({
     type: Date,
     optional: true
   },
+  
+  createdOn: {
+    type: Date,
+    optional: true
+  },
 
   createdBy: {
     type: String,
@@ -31,6 +36,24 @@ MarksList.attachSchema(new SimpleSchema({
 
   tags: {
     type: [Object],
+    optional: true
+  }
+
+}));
+
+TagsList.attachSchema(new SimpleSchema({
+  name: {
+    type: String,
+    optional: true
+  },
+
+  slug: {
+    type: Date,
+    optional: true
+  },
+
+  user: {
+    type: String,
     optional: true
   }
 
