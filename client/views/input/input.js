@@ -30,6 +30,12 @@ Template.input.helpers({
 });
 
 Template.input.onRendered(function() {
+	$('.ui.accordion').accordion();
+
+	if (Router.current().route.getName() === 'overview') {
+		$('.ui.accordion').accordion('open', 0);
+	}
+
 	$('.ui.checkbox').checkbox();
 
 	$('.ui.dropdown')

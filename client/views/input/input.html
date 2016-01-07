@@ -1,44 +1,47 @@
 <template name="input">
-<div class="ui fluid form segment">
-  <form name="mainInputForm" class="mainInputForm ui form">
-    <div class="two fields">
-      <div class="field">
-        <label>Title</label>
-        <input placeholder="Mark Name" name="titleInput" type="text">
-      </div>
+  <div class="ui styled fluid accordion">
+    <div class="title active">
+      <i class="dropdown icon"></i>
+      Create New Mark
     </div>
-    <div class="field">
-      <label>Mark</label>
-      <textarea name="mainInput"></textarea>
-    </div>
-
-    <div class="field">
-      <div class="ui checked checkbox">
-        <input type="checkbox" name="privateInput" checked="">
-        <label>Make Mark Private</label>
-      </div>
-    </div>
-
-    <div class="field">
-      <div class="ui fluid multiple search selection dropdown">
-        <input type="hidden" name="country">
-        <i class="dropdown icon"></i>
-        <div class="default text">Select Country</div>
-        <div class="menu">
-          <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
-          <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
-          <div class="item" data-value="al"><i class="al flag"></i>Albania</div>
-          <div class="item" data-value="dz"><i class="dz flag"></i>Algeria</div>
-          <div class="item" data-value="as"><i class="as flag"></i>American Samoa</div>
+    <div class="content active">
+      <form name="mainInputForm" class="mainInputForm ui form">
+        <div class="field">
+          <label>Title</label>
+          <input placeholder="Mark Name" name="titleInput" type="text">
         </div>
-      </div>
-    </div>
+        <div class="field">
+          <label>Mark</label>
+          <textarea name="mainInput"></textarea>
+        </div>
 
-    <div class="field">
-      <input class="ui submit primary button" type="submit" value="Create New Mark">
-    </div>
-  </form>
-</div>
+        <div class="field">
+          <div class="ui checked checkbox">
+            <input type="checkbox" name="privateInput" checked="">
+            <label>Make Mark Private</label>
+          </div>
+        </div>
 
+        <div class="field">
+          <div class="ui fluid multiple search selection dropdown">
+            <input type="hidden" name="country">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Country</div>
+            <div class="menu">
+              <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+              <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
+              <div class="item" data-value="al"><i class="al flag"></i>Albania</div>
+              <div class="item" data-value="dz"><i class="dz flag"></i>Algeria</div>
+              <div class="item" data-value="as"><i class="as flag"></i>American Samoa</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input class="ui submit primary button" type="submit" value="Create New Mark">
+        </div>
+      </form>
+    </div>
+  </div>
 
 </template>
