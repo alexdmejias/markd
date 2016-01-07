@@ -31,4 +31,10 @@ Template.input.helpers({
 
 Template.input.onRendered(function() {
 	$('.ui.checkbox').checkbox();
+
+	$('.ui.dropdown')
+  .dropdown({
+    allowAdditions: true
+  });
+
 })
