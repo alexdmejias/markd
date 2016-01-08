@@ -30,6 +30,5 @@ Router.route('/marks/:_id', {
 
 Router.route('/tags', {
   name: 'tags',
-  template: 'tags',
-  data: function () { return {records: TagsList.find().fetch()}}
+  template: 'tags'
 });
