@@ -1,4 +1,4 @@
-Template.tagsNew.events({
+Template.tagsInput.events({
   'submit .tagInputForm': function(event) {
 		event.preventDefault();
 
@@ -26,8 +26,8 @@ Template.tagsNew.events({
 	}
 });
 
-Template.tagsNew.onRendered(function() {
+Template.tagsInput.onRendered(function() {
   $('.ui.dropdown').dropdown();
 });
 
-Template.tagsNew.helpers({});
+Template.tagsInput.helpers({});
