@@ -12,8 +12,6 @@ mrt:moment
 fourseven:scss
 yasaricli:slugify
 erasaur:meteor-lodash
-juliancwirko:s-alert
-juliancwirko:s-alert-jelly
 accounts-facebook
 accounts-google
 accounts-github
@@ -39,3 +37,5 @@ babrahams:constellation
 semantic:ui
 flemay:less-autoprefixer
 zimme:active-route
+juliancwirko:s-alert
+juliancwirko:s-alert-jelly
