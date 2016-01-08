@@ -1,6 +1,6 @@
 Template.single_header.helpers({
 	displayDate: function() {
-		return moment(this.date).format('MM/DD/YYYY, h:mm a');
+		return moment(this.updatedOn).format('MM/DD/YYYY, h:mm a');
 	},
 	inSingle: function() {
 		return (Router.current().route.getName() !== 'overview');
