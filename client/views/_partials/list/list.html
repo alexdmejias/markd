@@ -1,23 +1,12 @@
 <template name="list">
-  {{#if tags}}
-    <div class="ui segment">
-      {{#each tags}}
-        <a class="ui {{color}} large label" href="/marks/tags/{{slug}}">
-          {{name}}
-          <div class="detail">{{count}}</div>
-        </a>
-      {{/each}}
-    </div>
-  {{/if}}
 
   <h5 class="ui top attached header">
-    Marks: {{records.length}}
+    Marks: {{marks.length}}
   </h5>
   <div class="ui attached segment">
-    {{#if records}}
-      {{#each records}}
+    {{#if marks}}
+      {{#each marks}}
         {{> single}}
-
         <div class="ui hidden divider"></div>
       {{/each}}
     {{else}}
