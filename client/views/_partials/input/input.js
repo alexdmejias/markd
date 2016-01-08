@@ -1,5 +1,5 @@
 Template.input.events({
-	'submit form': function(event) {
+	'submit .mainInputForm': function(event) {
 		event.preventDefault();
 		var input = event.target.mainInput || '',
 			title = event.target.titleInput || '';
@@ -28,8 +28,6 @@ Template.input.events({
 					$('.ui.checkbox').checkbox('check');
 				}
 			});
-
-
 		}
 	}
 });
@@ -38,7 +36,7 @@ Template.input.helpers({
 });
 
 Template.input.onRendered(function() {
-	$('.ui.accordion').accordion();
+	$('.ui.accordion').accordion('close', 0);
 
 	if (Router.current().route.getName() === 'overview') {
 		$('.ui.accordion').accordion('open', 0);
@@ -46,8 +44,7 @@ Template.input.onRendered(function() {
 
 	$('.ui.checkbox').checkbox();
 
-	$('.ui.dropdown')
-  .dropdown({
+	$('.ui.dropdown').dropdown({
     allowAdditions: true
   });
 

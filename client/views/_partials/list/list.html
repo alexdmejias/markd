@@ -9,15 +9,19 @@
       {{/each}}
     </div>
   {{/if}}
-  <div class="items-container">
-    <div class="html ui top attached segment">
-      {{#if records}}
-        {{#each records}}
-          {{> single}}
-        {{/each}}
-      {{else}}
-        No Marks to Show, add some
-      {{/if}}
-    </div>
+
+  <h5 class="ui top attached header">
+    Marks: {{records.length}}
+  </h5>
+  <div class="ui attached segment">
+    {{#if records}}
+      {{#each records}}
+        {{> single}}
+
+        <div class="ui hidden divider"></div>
+      {{/each}}
+    {{else}}
+      No Marks to Show, add some
+    {{/if}}
   </div>
 </template>

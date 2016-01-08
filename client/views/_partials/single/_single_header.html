@@ -1,5 +1,5 @@
 <template name="single_header">
-  <header class="ui top attached label {{#if editingTitle}}editingTitle{{/if}}">
+  <header class="ui top attached label {{#if editingTitle}}editingTitle{{/if}} {{#if private}}inverted blue{{/if}}">
     {{#if private}}
       <i class="privacy icon"></i>
     {{/if}}

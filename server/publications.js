@@ -1,9 +1,9 @@
 Meteor.publish('indexMarks', function() {
-  return MarksList.find({createdBy: this.userId, archived: false}, {sort :{createdOn: -1}});
+  return MarksList.find({createdBy: this.userId, archived: false}, {sort :{createdOn: 1}});
 });
 
 Meteor.publish('archievedMarks', function() {
-  return MarksList.find({createdBy: this.userId, archived: true}, {sort :{createdOn: -1}});
+  return MarksList.find({createdBy: this.userId, archived: true}, {sort :{createdOn: 1}});
 });
 
 Meteor.publish('singleMark', function(id) {

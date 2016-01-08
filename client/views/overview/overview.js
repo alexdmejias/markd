@@ -5,5 +5,5 @@ Template.overview.onCreated(function() {
 
 	template.autorun(function() {
 		template.subscribe('indexMarks');
-	})
+	});
 });
