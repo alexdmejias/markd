@@ -8,7 +8,7 @@ MarksList.attachSchema(new SimpleSchema({
     type: Date,
     optional: true
   },
-  
+
   createdOn: {
     type: Date,
     optional: true
@@ -43,16 +43,22 @@ MarksList.attachSchema(new SimpleSchema({
 
 TagsList.attachSchema(new SimpleSchema({
   name: {
-    type: String,
-    optional: true
+    type: String
   },
 
   slug: {
-    type: Date,
-    optional: true
+    type: String
   },
 
   user: {
+    type: String
+  },
+
+  color: {
+    type: String
+  },
+
+  parent: {
     type: String,
     optional: true
   }

@@ -1,0 +1,56 @@
+<template name="tagsNew">
+  <div class="ui segment">
+    <form name="tagInputForm" class="tagInputForm ui form">
+      <h4 class="ui dividing header">Create a new label</h4>
+      <div class="two fields">
+        <div class="field">
+          <label>Name</label>
+          <input name="labelName" placeholder="Label Name" type="text">
+        </div>
+
+        <div class="field">
+          <label>Slug</label>
+          <input name="Name" placeholder="Read Only" readonly="" type="text">
+        </div>
+      </div>
+
+      <div class="two fields">
+        <div class="field">
+          <label>Parent Label</label>
+          <select class="ui dropdown">
+            <option value="p1">parent one</option>
+            <option value="p2">parent two</option>
+            <option value="p3">parent three</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Color</label>
+          <div class="ui fluid search selection dropdown color">
+            <input type="hidden" name="country">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Color</div>
+            <div class="menu">
+              <div class="item" data-value="red"><i class="circle red icon"></i>Red</div>
+              <div class="item" data-value="orange"><i class="circle orange icon"></i>Orange</div>
+              <div class="item" data-value="yellow"><i class="circle yellow icon"></i>Yellow</div>
+              <div class="item" data-value="olive"><i class="circle olive icon"></i>Olive</div>
+              <div class="item" data-value="green"><i class="circle green icon"></i>Green</div>
+              <div class="item" data-value="teal"><i class="circle teal icon"></i>Teal</div>
+              <div class="item" data-value="blue"><i class="circle blue icon"></i>Blue</div>
+              <div class="item" data-value="violet"><i class="circle violet icon"></i>Violet</div>
+              <div class="item" data-value="purple"><i class="circle purple icon"></i>Purple</div>
+              <div class="item" data-value="pink"><i class="circle pink icon"></i>Pink</div>
+              <div class="item" data-value="brown"><i class="circle brown icon"></i>Brown</div>
+              <div class="item" data-value="grey"><i class="circle grey icon"></i>Grey</div>
+              <div class="item" data-value="black"><i class="circle black icon"></i>Black</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <input class="ui submit primary button" type="submit" value="Create New Tag">
+      </div>
+    </form>
+  </div>
+</template>

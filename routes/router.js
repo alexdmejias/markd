@@ -31,6 +31,12 @@ Router.route('/marks/:_id', {
   data: function () { return {records: MarksList.find().fetch()} }
 });
 
+Router.route('/tags', {
+  name: 'tags',
+  template: 'tags',
+  data: function () { return {records: TagsList.find().fetch()}}
+});
+
 //
 // Router.route('/marks/tags/:slug', function() {
 //   var marks = MarksList.find({ 'tags.slug': this.params.slug }, {sort :{date: -1}});

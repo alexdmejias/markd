@@ -9,3 +9,7 @@ Meteor.publish('archievedMarks', function() {
 Meteor.publish('singleMark', function(id) {
   return MarksList.find({createdBy: this.userId, _id: id});
 });
+
+Meteor.publish('tagsList', function(id) {
+  return TagsList.find();
+})
