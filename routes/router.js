@@ -1,9 +1,5 @@
 'use strict';
 
-Router.configure({
-  layoutTemplate: 'layout'
-});
-
 Router.route('/', {
   name: 'overview',
   template: function() {
