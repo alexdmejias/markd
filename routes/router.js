@@ -2,16 +2,7 @@
 
 Router.route('/', {
   name: 'overview',
-  template: function() {
-    var template;
-    if (!Meteor.userId()) {
-      template = '404'
-    } else {
-      template = 'overview'
-    }
-
-    return template
-  }
+  template: 'overview'
 });
 
 Router.route('/marks/archive', {
