@@ -5,7 +5,7 @@
 	<div class="wrapper">
 		{{#if loggedIn}}
 			{{> input}}
-			{{> Template.contentBlock}}
+			{{> Template.dynamic template=main}}
 		{{else}}
 			not logged in
 		{{/if}}

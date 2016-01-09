@@ -1,21 +1,28 @@
 'use strict';
 
-Router.route('/', {
-  name: 'overview',
-  template: 'overview'
+FlowRouter.route('/', {
+  action: function() {
+    BlazeLayout.render("layout", {main: 'overview'});
+  }
 });
 
-Router.route('/marks/archive', {
+FlowRouter.route('/marks/archive', {
   name: 'archive',
-  template: 'archive'
+  action: function() {
+    BlazeLayout.render('layout', {main: 'archive'});
+  }
 });
 
-Router.route('/marks/:_id', {
+FlowRouter.route('/marks/:_id', {
   name: 'singleMark',
-  template: 'singleMark',
+  action: function() {
+    BlazeLayout.render('layout', {main: 'singleMark'});
+  }
 });
 
-Router.route('/tags', {
+FlowRouter.route('/tags', {
   name: 'tags',
-  template: 'tags'
+  action: function() {
+    BlazeLayout.render('layout', {main: 'tags'});
+  }
 });
