@@ -12,7 +12,7 @@ Template.input.events({
 				title: title.value,
 				archived: false,
 				private: $('.ui.checkbox').checkbox('is checked'),
-				tags: [],
+				tags: $('.mainInputForm').find('.__tags').dropdown('get value').split(','),
 				updatedOn: new Date(),
 				createdOn: new Date(),
 				createdBy: Meteor.userId(),
@@ -33,19 +33,21 @@ Template.input.events({
 });
 
 Template.input.helpers({
+	'tags': function() {
+		return Tags.find().fetch();
+	}
 });
 
 Template.input.onRendered(function() {
-	$('.ui.accordion').accordion('close', 0);
+	var $mainInputForm = $('.mainInputForm'),
+		$inputAccordion = $('.ui.accordion');
 
-	if (Router.current().route.getName() === 'overview') {
-		$('.ui.accordion').accordion('open', 0);
-	}
+	$inputAccordion.accordion();
 
-	$('.ui.checkbox').checkbox();
+	$mainInputForm.find('.ui.checkbox').checkbox();
 
-	$('.ui.dropdown').dropdown({
+	$mainInputForm.find('.ui.dropdown').dropdown({
     allowAdditions: true
   });
 
-})
+});

@@ -11,7 +11,6 @@ Template.tagsInput.events({
         name: input.value,
         slug: slugify(input.value),
         user: Meteor.userId(),
-        color: $('.color.dropdown').dropdown('get value'),
         parent: 'this is the parent'
       };
 
@@ -27,7 +26,13 @@ Template.tagsInput.events({
 });
 
 Template.tagsInput.onRendered(function() {
-  $('.ui.dropdown').dropdown();
+  var $tagInputForm = $('.tagInputForm');
+
+  // $tagInputForm.find('.ui.dropdown').dropdown();
+  $tagInputForm.find('.ui.dropdown').dropdown({
+    // allowAdditions: true
+  });
+
 });
 
 Template.tagsInput.helpers({});
