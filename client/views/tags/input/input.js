@@ -15,7 +15,7 @@ Template.tagsInput.events({
         parent: 'this is the parent'
       };
 
-      TagsList.insert(toInsert, function(err, _id) {
+      Tags.insert(toInsert, function(err, _id) {
         if (!err) {
           sAlert.error('Something went wrong, please try again');
         } else {

@@ -1,6 +1,6 @@
 Template.tags.helpers({
 	'tags': function () {
-		return TagsList.find().fetch();
+		return Tags.find().fetch();
 	}
 });
 

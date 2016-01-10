@@ -11,5 +11,5 @@ Meteor.publish('singleMark', function(id) {
 });
 
 Meteor.publish('tagsList', function(id) {
-  return TagsList.find({user: this.userId}, {sort:{name: 1}});
+  return Tags.find({user: this.userId}, {sort:{name: 1}});
 })

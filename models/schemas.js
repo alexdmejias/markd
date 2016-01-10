@@ -35,13 +35,13 @@ MarksList.attachSchema(new SimpleSchema({
   },
 
   tags: {
-    type: [Object],
+    type: [Tags],
     optional: true
   }
 
 }));
 
-TagsList.attachSchema(new SimpleSchema({
+Tags.attachSchema(new SimpleSchema({
   name: {
     type: String
   },
