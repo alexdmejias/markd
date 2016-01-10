@@ -4,13 +4,17 @@
     Marks: {{marks.length}}
   </h5>
   <div class="ui attached segment">
-    {{#if marks}}
-      {{#each marks}}
-        {{> single}}
-        <div class="ui hidden divider"></div>
-      {{/each}}
+    {{#if isReady}}
+      {{#if marks}}
+        {{#each marks}}
+          {{> single}}
+          <div class="ui hidden divider"></div>
+        {{/each}}
+      {{else}}
+        <h1>no marks</h1>
+      {{/if}}
     {{else}}
-      No Marks to Show, add some
+      {{> loading}}
     {{/if}}
   </div>
 </template>
