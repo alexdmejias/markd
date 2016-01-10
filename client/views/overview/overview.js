@@ -1,6 +1,6 @@
 Template.overview.helpers({
 	'marks': function() {
-		return MarksList.find({archived: false}).fetch();
+		return Marks.find({archived: false}).fetch();
 	}
 });
 

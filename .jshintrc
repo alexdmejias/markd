@@ -26,6 +26,6 @@
     "Template": false,
     "Mongo": false,
     "Router": false,
-    "MarksList": false
+    "Marks": false
   }
 }

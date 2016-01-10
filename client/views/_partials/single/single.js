@@ -16,18 +16,18 @@ Template.single.events({
 			var titleValue = template.find('#editTitleField-' + this._id).value;
 
 			var isLink = (inputValue.substr(0,4) === 'http');
-			MarksList.update(this._id, {$set: {text: inputValue, link: isLink, title: titleValue}});
+			Marks.update(this._id, {$set: {text: inputValue, link: isLink, title: titleValue}});
 		} else {
 			Session.set('editing', this._id);
 		}
 	},
 	'click .remove': function() {
-		MarksList.remove(this._id);
+		Marks.remove(this._id);
 	},
 
 	'click .archive': function() {
     var status = this.archived || false;
-		MarksList.update(this._id, {$set: {archived: !status}});
+		Marks.update(this._id, {$set: {archived: !status}});
 	}
 
 });

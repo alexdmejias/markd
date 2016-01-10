@@ -17,7 +17,7 @@ Template.input.events({
 				createdOn: new Date(),
 				createdBy: Meteor.userId(),
 			};
-			MarksList.insert(toInsert, function(err, id) {
+			Marks.insert(toInsert, function(err, id) {
 				if (err) {
 					sAlert.error('Something went wrong please try again');
 				} else {

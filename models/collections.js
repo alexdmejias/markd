@@ -1,6 +1,6 @@
-MarksList = new Mongo.Collection('marks');
+Marks = new Mongo.Collection('marks');
 
-MarksList.allow({
+Marks.allow({
   insert: function () {
     // the user must be logged in, and the document must be owned by the user
     return true;

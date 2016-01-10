@@ -1,4 +1,4 @@
-MarksList.attachSchema(new SimpleSchema({
+Marks.attachSchema(new SimpleSchema({
   text: {
     type: String,
     optional: true
