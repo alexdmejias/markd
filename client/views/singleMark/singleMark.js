@@ -1,3 +1,9 @@
+Template.singleMark.helpers({
+  'marks': function() {
+    return MarksList.find().fetch();
+  }
+});
+
 Template.singleMark.onCreated(function() {
   var template = this;
 
