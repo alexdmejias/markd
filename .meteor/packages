@@ -10,7 +10,6 @@ markdown
 mrt:moment
 fourseven:scss
 yasaricli:slugify
-erasaur:meteor-lodash
 accounts-facebook
 accounts-google
 accounts-github
