@@ -11,3 +11,8 @@ Template.overview.onCreated(function() {
 		template.subscribe('indexMarks');
 	});
 });
+
+Template.overview.onRendered(function() {
+	$inputAccordion = $('.ui.accordion');
+	$inputAccordion.accordion('open', 0);
+})

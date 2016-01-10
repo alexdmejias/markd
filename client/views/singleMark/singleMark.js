@@ -12,8 +12,8 @@ Template.singleMark.onCreated(function() {
   })
 });
 
-Template.singleMark.helpers({
-  'marks': function() {
-    return MarksList.find().fetch();
-  }
+Template.singleMark.onRendered(function() {
+  $inputAccordion = $('.ui.accordion');
+
+  $inputAccordion.accordion('close', 0);
 });

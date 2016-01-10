@@ -11,3 +11,9 @@ Template.archive.onCreated(function() {
 		template.subscribe('archievedMarks');
 	})
 });
+
+Template.archive.onRendered(function() {
+	$inputAccordion = $('.ui.accordion');
+
+	$inputAccordion.accordion('close', 0);
+})
