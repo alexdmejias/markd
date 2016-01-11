@@ -1,6 +1,7 @@
 'use strict';
 
 FlowRouter.route('/', {
+  name: 'overview',
   action: function() {
     BlazeLayout.render("layout", {main: 'overview'});
   }
