@@ -28,11 +28,14 @@ Template.tagsInput.events({
 Template.tagsInput.onRendered(function() {
   var $tagInputForm = $('.tagInputForm');
 
-  // $tagInputForm.find('.ui.dropdown').dropdown();
   $tagInputForm.find('.ui.dropdown').dropdown({
-    // allowAdditions: true
+    maxSelections: 1
   });
 
 });
 
-Template.tagsInput.helpers({});
+Template.tagsInput.helpers({
+  'tags': function() {
+    return Tags.find().fetch()
+  }
+});

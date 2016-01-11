@@ -16,17 +16,19 @@
 
       <div class="two fields">
         <div class="field">
-          <label>Parent Label</label>
-          <select class="ui dropdown">
-            <option value="p1">parent one</option>
-            <option value="p2">parent two</option>
-            <option value="p3">parent three</option>
-          </select>
+          <div class="ui search selection multiple dropdown">
+            <input type="hidden" name="user">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Friend</div>
+            <div class="menu">
+              {{#each tags}}
+              <div class="item" data-value="{{_id}}"><i class="circle {{color}} icon"></i>{{name}}</div>
+              {{/each}}
+            </div>
+          </div>
         </div>
-
         <div class="field">
-          <label>Color</label>
-          <div class="ui fluid search selection dropdown color">
+          <div class="ui search selection multiple dropdown color">
             <input type="hidden" name="country">
             <i class="dropdown icon"></i>
             <div class="default text">Select Color</div>
