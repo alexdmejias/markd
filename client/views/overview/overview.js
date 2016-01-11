@@ -1,6 +1,6 @@
 Template.overview.helpers({
 	'marks': function() {
-		return Marks.find({archived: false}).fetch();
+		return Marks.find({archived: false}, {sort: {updatedOn: -1}}).fetch();
 	}
 });
 
