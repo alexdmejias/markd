@@ -1,9 +1,8 @@
 <template name="single_footer">
   <div class="_tags">
-    {{#if tags}}
-      {{#each tags}}
-        <a href="/marks/tags/{{slug}}" class="ui {{color}} label">#{{name}}
-          {{pathFor route='tags.show'}}
+    {{#if tagsObj}}
+      {{#each tagsObj}}
+        <a href="/tags/{{slug}}" class="ui {{color}} label">#{{name}}
           <i class="delete icon __tags_delete"></i>
         </a>
       {{/each}}
