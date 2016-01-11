@@ -4,6 +4,8 @@ Template.input.events({
 		var input = event.target.mainInput || '',
 			title = event.target.titleInput || '';
 
+		var tags = $('.mainInputForm').find('.__tags').dropdown('get value').split(',');
+
 		if (!title && !input) {
 			console.log('cant submit empty mark');
 		} else {
@@ -12,7 +14,7 @@ Template.input.events({
 				title: title.value,
 				archived: false,
 				private: $('.ui.checkbox').checkbox('is checked'),
-				tags: $('.mainInputForm').find('.__tags').dropdown('get value').split(','),
+				tags: tags,
 				updatedOn: new Date(),
 				createdOn: new Date(),
 				createdBy: Meteor.userId(),
