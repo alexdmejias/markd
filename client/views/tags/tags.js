@@ -1,6 +1,6 @@
 Template.tags.helpers({
 	'tags': function () {
-		return Tags.find().fetch();
+		return Tags.find({}, {sort: {'name': 1}}).fetch();
 	}
 });
 

@@ -5,21 +5,21 @@
       <div class="two fields">
         <div class="field">
           <label>Name</label>
-          <input name="labelName" placeholder="Label Name" type="text">
+          <input name="tagName" class="__tagName" placeholder="Label Name" type="text">
         </div>
 
         <div class="field">
           <label>Slug</label>
-          <input name="Name" placeholder="Read Only" readonly="" type="text">
+          <input name="Name" placeholder="{{tentativeSlug}}" readonly="" type="text">
         </div>
       </div>
 
       <div class="two fields">
         <div class="field">
-          <div class="ui search selection multiple dropdown">
+          <div class="ui search selection multiple dropdown __parent">
             <input type="hidden" name="user">
             <i class="dropdown icon"></i>
-            <div class="default text">Select Friend</div>
+            <div class="default text">Select Parent</div>
             <div class="menu">
               {{#each tags}}
               <div class="item" data-value="{{_id}}"><i class="circle {{color}} icon"></i>{{name}}</div>
@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="field">
-          <div class="ui search selection multiple dropdown color">
+          <div class="ui search selection multiple dropdown __color">
             <input type="hidden" name="country">
             <i class="dropdown icon"></i>
             <div class="default text">Select Color</div>
