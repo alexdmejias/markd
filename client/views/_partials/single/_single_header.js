@@ -5,6 +5,9 @@ Template.single_header.helpers({
 	isArchived: function() {
 		return this.archived;
 	},
+  title: function() {
+    return this.title ? this.title : '[Untitled]';
+  },
 	editingStatus: function() {
 		var label = '';
 		if (Session.equals('editing', this._id)) {
