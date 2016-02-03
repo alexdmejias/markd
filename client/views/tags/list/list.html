@@ -11,7 +11,12 @@
             <div class="header">
               {{name}}
             </div>
-            <a href="/tag/{{slug}}" class="description">{{tagHierchy this}}</a>
+            <div class="ui small breadcrumb">
+              {{#each tagHierchy this}}
+                <a class="section">{{this}}</a>
+                <i class="right chevron icon divider"></i>
+              {{/each}}
+            </div>
           </div>
         </div>
       {{/each}}
