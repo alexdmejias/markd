@@ -61,6 +61,10 @@ Tags.attachSchema(new SimpleSchema({
   parent: {
     type: String,
     optional: true
+  },
+
+  url: {
+    type: String
   }
 
 }));

@@ -5,17 +5,17 @@ Template.tagsInput.events({
 		event.preventDefault();
 
     var input = event.target.tagName;
-    var colorInput = $tagInputForm.find('.__color');
-    var parentInput = $tagInputForm.find('.__parent');
+    var $colorInput = $tagInputForm.find('.__color');
+    var $parentInput = $tagInputForm.find('.__parent');
 
-    if (colorInput.dropdown('get value')) {
-      colorInput = colorInput.dropdown('get value').split(',')[0];
-    } else {
-      colorInput = 'grey'
+    var colorInput = 'grey';
+    if ($colorInput.dropdown('get value')) {
+      colorInput = $colorInput.dropdown('get value').split(',')[0];
     }
 
-    if (parentInput.dropdown('get value')) {
-      parentInput = parentInput.dropdown('get value').split(',')[0];
+    var parentInput;
+    if ($parentInput.dropdown('get value')) {
+      parentInput = $parentInput.dropdown('get value').split(',')[0];
     }
 
     if (!input) {
@@ -25,7 +25,8 @@ Template.tagsInput.events({
         name: input.value,
         slug: slugify(input.value),
         user: Meteor.userId(),
-        color: colorInput
+        color: colorInput,
+        url: slugify(input.value)
       };
 
       // TODO: show slug
@@ -35,18 +36,20 @@ Template.tagsInput.events({
 
       if (parentInput) {
         toInsert.parent = parentInput;
+        toInsert.url = Tags.findOne(parentInput).slug + '-' + toInsert.url;
       }
 
       Tags.insert(toInsert, function(err, _id) {
         if (err) {
           console.warn(err);
+
           sAlert.error('Something went wrong, please try again');
         } else {
           sAlert.success('New tag created');
 
           input.value = '';
-          colorInput.dropdown('clear');
-          parentInput.dropdown('clear');
+          $colorInput.dropdown('clear');
+          $parentInput.dropdown('clear');
         }
       });
     }
