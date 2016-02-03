@@ -24,7 +24,7 @@ Template.input.events({
 					sAlert.error('Something went wrong please try again');
 				} else {
 
-					sAlert.success(`Successfully created new Mark. <a href=\"/marks/${id}\">View it</a>`, {html: true});
+					sAlert.success('Successfully created new Mark. <a href="/marks/'+id+'">View it</a>', {html: true});
 					input.value = '';
 					title.value = '';
 					$('.ui.checkbox').checkbox('check');
